@@ -17,8 +17,8 @@ jobs:
         version: '6.2.3'
         arch: 'win64_msvc2019_64'
 
-    - name: Set up CMake
-      uses: actions/setup-cmake@v3
+    - name: Install CMake
+      run: choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' --no-progress
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
