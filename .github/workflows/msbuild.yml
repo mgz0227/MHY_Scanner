@@ -17,8 +17,8 @@ jobs:
         version: '6.2.3'
         arch: 'win64_msvc2019_64'
 
-    - name: Add CMake to PATH
-      uses: lukka/get-cmake@v3
+    - name: Set up CMake
+      uses: actions/setup-cmake@v3
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
@@ -26,5 +26,5 @@ jobs:
     - name: Configure CMake
       run: cmake -B build -S . -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="D:/a/MHY_Scanner/Qt/6.2.3/msvc2019_64"
 
-    - name: Build with MSBuild
+    - name: Build with CMake
       run: cmake --build build --config Release
