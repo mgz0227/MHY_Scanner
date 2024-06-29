@@ -50,7 +50,7 @@ public:
     void closeEvent(QCloseEvent* event) override;
     void showEvent(QShowEvent* event) override;
 public slots:
-    void LoginAccount();
+    void AddAccount();
     void SetDefaultAccount();
     void DeleteAccount();
     void About();
